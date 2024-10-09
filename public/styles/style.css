@@ -14,7 +14,7 @@ body{
 :root {
 
     --tamanho-header: 80px;
-    --tamanho-banner: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+    --tamanho-banner: calc(50vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
     --tamanho-login: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
     --tamanho-footer: 65px;
 
@@ -87,19 +87,21 @@ body{
 
 .banner .container{
 
+    height: 100%;
     justify-content: center;
     align-items: center;
-    height: 100%;
 
 }
 
 .banner .container p{
-    width: 50%;
+
+    width: max-content;
     margin: 0;
     padding: 0;
-    font-size: 36px;
-    
+    font-size: 36px;    
+
 }
+
 
 .banner .container span{
 
@@ -112,10 +114,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    text-align: center;
+    
 
 }
 
-.social .container .boxes{
+.container .boxes{
 
     display: flex;
     justify-content: space-between;
@@ -124,16 +129,31 @@ body{
 
 }
 
+.boxes{
+    flex-direction: column;
+}
+
 .box {
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     align-items: center;
+    
 
 }
 
+
 .box img {
     width: 170px;
+    padding: 20px;  
+}
+
+.box h4{
+    
+    display: flex;
+
+
+
 }
 
 
@@ -160,7 +180,7 @@ body{
     
 }
 
-.card-login, .card-cadastro{
+.formulario{
     background-color: #d1d1d1;
     width: var(--tamanho-login);
     border-radius: 10px;
@@ -177,7 +197,8 @@ h2{
     font-size: 40px;
 
 }
-    #email_input, #senha_input, #nome_input, #codigo_input, #confirmacao_senha_input{
+
+.formulario .campo #email_input, #senha_input, #codigo_input, #nome_input, #confirmacao_senha_input{
 
         display: flex;
         border: 2px solid #32b9cd;
@@ -185,7 +206,7 @@ h2{
         padding: 10px;
         font-size: 20px;
         border-radius: 10px;
-        width: 520px;
+        width: 100%;
         height: 25px;
         margin-top: 5px;
         margin-bottom: 15px;
